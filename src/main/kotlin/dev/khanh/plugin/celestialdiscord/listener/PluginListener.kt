@@ -16,28 +16,28 @@ class PluginListener(val plugin: CelestialDiscordPlugin): Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     fun onChat(event: AsyncPlayerChatEvent) {
         Bukkit.getScheduler().runTaskAsynchronously(plugin, Runnable {
-            plugin.webhookManager!!.handlePlayerChatEvent(event.player, event)
+            plugin.webhookManager.handlePlayerChatEvent(event.player, event)
         })
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
     fun onJoin(event: PlayerJoinEvent) {
         Bukkit.getScheduler().runTaskAsynchronously(plugin, Runnable {
-            plugin.webhookManager!!.handlePlayerJoinEvent(event.player, event)
+            plugin.webhookManager.handlePlayerJoinEvent(event.player, event)
         })
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
     fun onQuit(event: PlayerQuitEvent) {
         Bukkit.getScheduler().runTaskAsynchronously(plugin, Runnable {
-            plugin.webhookManager!!.handlePlayerQuitEvent(event.player, event)
+            plugin.webhookManager.handlePlayerQuitEvent(event.player, event)
         })
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
     fun onAdvancementDone(event: PlayerAdvancementDoneEvent) {
         Bukkit.getScheduler().runTaskAsynchronously(plugin, Runnable {
-            plugin.webhookManager!!.handlePlayerAdvancementDoneEvent(event.player, event)
+            plugin.webhookManager.handlePlayerAdvancementDoneEvent(event.player, event)
         })
     }
 }

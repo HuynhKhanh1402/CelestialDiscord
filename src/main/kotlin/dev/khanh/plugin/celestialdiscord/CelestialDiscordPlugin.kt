@@ -8,9 +8,9 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class CelestialDiscordPlugin : JavaPlugin() {
 
-    var configFile: ConfigFile? = null
-    var webhookManager: WebhookManager? = null
-    var sendServerInfoTask: SendServerInfoTask? = null
+    lateinit var configFile: ConfigFile
+    lateinit var webhookManager: WebhookManager
+    lateinit var sendServerInfoTask: SendServerInfoTask
 
     override fun onEnable() {
         configFile = ConfigFile(this)
