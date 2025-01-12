@@ -1,0 +1,20 @@
+config-version: 1
+
+server-id: "server1"
+
+web-hook:
+  url: "https://mcelestial.lormas.net/webhook/chat"
+  luckperms-data:
+    included: true
+    metadata-keys: []
+
+  events:
+    chat: true
+    join: true
+    leave: true
+    advancement: true
+
+server-info:
+  enabled: true
+  url: "https://mcelestial.lormas.net/syncServerData"
+  interval-in-tick: 1200 # 1200 tick = 60s

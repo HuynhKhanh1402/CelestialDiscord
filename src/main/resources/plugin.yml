@@ -1,0 +1,5 @@
+name: CelestialDiscord
+version: '1.0'
+main: dev.khanh.plugin.celestialdiscord.CelestialDiscordPlugin
+api-version: '1.18'
+authors: [ KhanhHuynh ]
